@@ -1,7 +1,7 @@
-
 import React from "react";
 import TodoList from "@/components/TodoList/TodoList";
 import { motion } from "framer-motion";
+import ThemeToggle from "@/components/ThemeToggle";
 
 const Index = () => {
   return (
@@ -39,6 +39,15 @@ const Index = () => {
               <span className="text-white font-medium text-sm">T</span>
             </div>
             <span className="font-medium text-lg">Taskly</span>
+          </motion.div>
+          
+          {/* Theme Toggle Button */}
+          <motion.div
+            initial={{ opacity: 0, x: 20 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.5 }}
+          >
+            <ThemeToggle />
           </motion.div>
         </div>
       </header>
